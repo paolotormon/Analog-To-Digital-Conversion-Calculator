@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <stdlib.h>
-#include <bits/stdc++.h> 
 using namespace std;
 
 double getCloser(double val1, double val2, double target) 

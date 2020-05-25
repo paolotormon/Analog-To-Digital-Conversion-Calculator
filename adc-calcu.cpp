@@ -46,6 +46,32 @@ double findDigitalCode(double arr[], int n, double target)
     return arr[mid]; 
 }
 
+void convertToDigital(int counter){
+	
+	int a[10], i;    
+	for(i=0; counter>0; i++)    
+	{    
+		a[i]=counter%2;    
+		counter= counter/2;  
+	}    
+	    
+	for(i=i-1 ;i>=0 ;i--)    
+	{    
+		cout<<a[i];    
+	}    
+	cout<<". Press enter to try again. \n";
+}
+
+void searchDigitalCode(double arr[], int x, double amp_pulse){
+	for(int counter=0;counter<x;counter++){
+		if(arr[counter]==amp_pulse){
+			convertToDigital(counter);
+		}
+	}
+}
+
+
+
 main(){
 	system("Color fc");
 	float lowerbound, higherbound, range;
@@ -75,6 +101,7 @@ main(){
 	double it_volt;
 	double s_amplitude;
 	int x = sizeof(arr)/sizeof(arr[0]);
+	double amp_pulse;
 	it_volt=lowerbound;
 	arr[0]=it_volt;
 	for(int i=1;i<qnt_levels;i++){
@@ -87,14 +114,17 @@ main(){
 		cout<<arr[i]<<"\n";
 	}
 	
-	cout<<"\nBelow is a digital code calculator given a sample amplitude."<<endl;
+	cout<<"\nBelow is a DIGITAL CODE CALCULATOR when given a sample amplitude. ";
+	cout<<"\n(Note: if it looks incomplete, just add zeros to the left)"<<endl;
 	
 	do{
 	
 		cout<<"\nEnter amplitude of a sample: ";
 		cin>>s_amplitude;
-		cout<<(findDigitalCode(arr,x,s_amplitude))<<
-		" is the equivalent digital code. Press enter to try again.\n";
+		amp_pulse=findDigitalCode(arr,x,s_amplitude);
+		cout<<"The Amplitude of Pulse is "<<amp_pulse;
+		cout<<". \nThe Digital Code assigned to it is ";
+		searchDigitalCode(arr, x,amp_pulse);
 		cin.ignore();
 	}while(true);
 }

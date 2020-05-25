@@ -1,6 +1,7 @@
 # Analog-To-Digital-Conversion-Calculator
 
-Solves for: 
+Solves for:
+
 **Step Size**
 
 **Quantization Level**
@@ -9,5 +10,6 @@ Solves for:
 
 **Digital Code from a Sample Amplitude**
 
+- - - -
 
-Download as zip then run using dev-C++
+***Download as zip then run using dev-C++***

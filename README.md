@@ -12,4 +12,6 @@ Solves for:
 
 - - - -
 
-***At the upper right (green button), download as zip then run using dev-C++***
+***At the upper right (green button), download as zip then run the cpp file using dev-C++***
+
+if you don't have dev-c++ you can download and run the .exe file instead

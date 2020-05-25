@@ -12,4 +12,4 @@ Solves for:
 
 - - - -
 
-***Download as zip then run using dev-C++***
+***At the upper right (green button), download as zip then run using dev-C++***

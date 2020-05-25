@@ -10,6 +10,8 @@ Solves for:
 
 **Digital Code from a Sample Amplitude**
 
+Needs only: signal range and number of bits 
+
 - - - -
 
 ***At the upper right (green button), download as zip then run the cpp file using dev-C++***

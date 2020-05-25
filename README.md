@@ -1,5 +1,10 @@
 # Analog-To-Digital-Conversion-Calculator
 
-Solves for: **Quantization Level, Step Size, Digital Code from a Sample Amplitude, Maximum Quantization Error**
+Solves for: 
+**Step Size**
+**Quantization Level**
+**Maximum Quantization Error**
+**Digital Code from a Sample Amplitude**
+
 
 Download as zip then run using dev-C++

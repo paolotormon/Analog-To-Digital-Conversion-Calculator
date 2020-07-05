@@ -11,7 +11,7 @@ double getCloser(double val1, double val2, double target)
         return val1; 
 } 
 
-double findDigitalCode(double arr[], int n, double target) 
+double findAmpPulse(double arr[], int n, double target) 
 { 
     if (target <= arr[0]) 
         return arr[0]; 
@@ -26,18 +26,16 @@ double findDigitalCode(double arr[], int n, double target)
             return arr[mid]; 
 
         if (target < arr[mid]) { 
-  
             if (mid > 0 && target > arr[mid - 1]) 
-                return getCloser(arr[mid - 1], 
-                                  arr[mid], target); 
+                return getCloser(arr[mid - 1],arr[mid], target); 
   
             j = mid; 
         } 
   
         else { 
             if (mid < n - 1 && target < arr[mid + 1]) 
-                return getCloser(arr[mid], 
-                                  arr[mid + 1], target); 
+                return getCloser(arr[mid], arr[mid + 1], target); 
+                
             i = mid + 1;  
         } 
     } 
@@ -49,16 +47,14 @@ double findDigitalCode(double arr[], int n, double target)
 void convertToDigital(int counter){
 	
 	int a[10], i;    
-	for(i=0; counter>0; i++)    
-	{    
+	for(i=0; counter>0; i++){    
 		a[i]=counter%2;    
 		counter= counter/2;  
 	}    
 	    
-	for(i=i-1 ;i>=0 ;i--)    
-	{    
-		cout<<a[i];    
-	}    
+	for(i=i-1 ;i>=0 ;i--)      
+		cout<<a[i];     
+		 
 	cout<<". Press enter to try again. \n";
 }
 
@@ -69,8 +65,6 @@ void searchDigitalCode(double arr[], int x, double amp_pulse){
 		}
 	}
 }
-
-
 
 main(){
 	system("Color fc");
@@ -118,10 +112,9 @@ main(){
 	cout<<"\n(Note: if it looks incomplete, just add zeros to the left)"<<endl;
 	
 	do{
-	
 		cout<<"\nEnter amplitude of a sample: ";
 		cin>>s_amplitude;
-		amp_pulse=findDigitalCode(arr,x,s_amplitude);
+		amp_pulse=findAmpPulse(arr,x,s_amplitude);
 		cout<<"The Amplitude of Pulse is "<<amp_pulse;
 		cout<<". \nThe Digital Code assigned to it is ";
 		searchDigitalCode(arr, x,amp_pulse);

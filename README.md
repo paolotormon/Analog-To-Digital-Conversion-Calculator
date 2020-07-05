@@ -8,7 +8,9 @@ Solves for:
 
 **Maximum Quantization Error**
 
-**Digital Code from a Sample Amplitude**
+**Digital Code from a Sample Amplitude** (note: uses rounding, not truncating)
+
+Needs only: signal range and number of bits 
 
 - - - -
 
